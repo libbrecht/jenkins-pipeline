@@ -2,9 +2,24 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      steps {
-        echo 'etape de build'
-        sh 'python --version'
+      parallel {
+        stage('build') {
+          steps {
+            echo 'etape de build'
+            sh '''
+cd /TP3/jenkins-pipeline
+
+
+'''
+          }
+        }
+
+        stage('Python') {
+          steps {
+            sh 'python --version'
+          }
+        }
+
       }
     }
 
