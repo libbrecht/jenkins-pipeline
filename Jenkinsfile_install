@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage (‘install environment for symfony’){
+        stage (‘install_env’){
         steps {
                 echo 'install apache2'
                 sh 'apt install apache2 -f'
