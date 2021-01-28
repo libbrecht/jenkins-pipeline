@@ -1,12 +1,6 @@
 pipeline { 
 	agent any
 	stages {
-		stage('check'){
-			steps{
-				echo 'check apache2'
-				sh 'systemctl status apache2'
-			}
-		}
 		stage('python'){
 			steps{
 				echo 'python version'
