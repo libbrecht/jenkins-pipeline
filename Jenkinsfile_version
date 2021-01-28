@@ -1,7 +1,7 @@
 pipeline { 
 	agent any 
 	stages {
-		stage('check_environement_for_symfony'){
+		stage('check'){
 			steps{
 				echo 'check apache2'
 				sh 'systemctl status apache2'
