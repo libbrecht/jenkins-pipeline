@@ -13,8 +13,7 @@ pipeline {
 				sh 'ls -la /home/cjenkins/composer.phar'
 				
 				echo 'symfony version'
-				sh 'export PATH=«$HOME/.symfony/bin:$PATH»'
-				sh 'symfony -V'
+				sh './home/cjenkins/.symfony/bin/symfony -V'
 			}
 		}
 	}
