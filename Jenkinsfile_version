@@ -3,13 +3,11 @@ pipeline {
 	stages {
 		stage('check_environement_for_symfony'){
 			steps{
-				step {
 				echo 'apahe2 status'
 				sh 'systemctl status apache2'
-				}step {
+				
 				echo 'php version'
 				sh 'php -V'
-				}
 			}
 		}
 	}
