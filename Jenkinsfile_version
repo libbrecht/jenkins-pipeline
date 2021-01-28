@@ -1,10 +1,10 @@
 pipeline { 
 	agent any
 	stages {
-		stage('php'){
+		stage('apache2'){
 			steps{
-				echo 'php version'
-				sh 'php --version'
+				echo 'apahe2 status'
+				sh 'systemctl status apache2'
 			}
 		}
 	}
