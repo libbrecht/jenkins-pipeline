@@ -1,10 +1,22 @@
 pipeline { 
 	agent any
 	stages {
-		stage('apache2'){
+		stage('check_environement_for_symfony'){
 			steps{
 				echo 'apahe2 status'
 				sh 'systemctl status apache2'
+			}
+			steps{
+				echo 'php version'
+				sh 'php --version'
+			}
+			steps{
+				echo 'check composer'
+				sh 'ls -la /home/cjenkins/'
+			}
+			steps{
+				echo 'symfony version'
+				sh 'symfony -V'
 			}
 		}
 	}
