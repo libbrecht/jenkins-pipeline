@@ -5,16 +5,13 @@ pipeline {
 			steps{
 				echo 'apahe2 status'
 				sh 'systemctl status apache2'
-			}
-			steps{
+			}steps{
 				echo 'php version'
 				sh 'php --version'
-			}
-			steps{
-				echo 'check composer'
-				sh 'ls -la /home/cjenkins/'
-			}
-			steps{
+			}steps{
+				echo 'python version'
+				sh 'python --version'
+			}steps{
 				echo 'symfony version'
 				sh 'symfony -V'
 			}
