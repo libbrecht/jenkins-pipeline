@@ -21,7 +21,8 @@ pipeline {
                 echo 'install symfony'
                 sh 'wget https://get.symfony.com/cli/installer -O - | bash'
                 sh '/home/cjenkins/.symfony/bin/symfony -V'
-      
+                
+            }
         }
     }
 }
