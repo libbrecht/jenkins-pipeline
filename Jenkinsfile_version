@@ -1,0 +1,23 @@
+pipeline { 
+	agent any 
+	stages {
+		stage('check environement for symfony'){
+			steps{
+				echo 'check apache2'
+				sh 'systemctl status apache2'
+			}
+      steps{
+				echo 'check php'
+				sh 'php --version'
+			}
+      steps{
+				echo 'check composer'
+				sh 'ls /home/cjenkins/'
+			}
+      steps{
+				echo 'check symfony'
+				sh 'symfony -V'
+			}
+		}   
+	}
+}
