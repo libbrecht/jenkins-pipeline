@@ -7,7 +7,13 @@ pipeline {
 				sh 'systemctl status apache2'
 				
 				echo 'php version'
-				sh 'php -V'
+				sh 'php --version'
+				
+				echo 'check composer'
+				sh 'ls -la /home/cjenkins/composer.phar'
+				
+				echo 'symfony version'
+				sh 'symfony -V'
 			}
 		}
 	}
